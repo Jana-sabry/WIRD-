@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIRD | وِرد</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NavBar -->
+    <header class="navbar" id="home">
+        <div class="navbar-inner container">
+            <a class="logo" href="#home" aria-label="وِرد - أعلى الصفحة">
+                <span class="icon icon-logo" aria-hidden="true"></span>
+                <span>وِرد</span>
+            </a>
+        </div>
+
+        <a class="today-link" href="#stats">أذكارك اليوم</a>
+
+        <nav class="nav-categories" aria-label="أقسام الأذكار">
+            <button type="button" class="cat-btn" data-category="morning" aria-pressed="false">
+                <span class="icon icon-sun" aria-hidden="true"></span>
+                <span>أذكار الصباح</span>
+            </button>
+
+            <button type="button" class="cat-btn" data-category="evening" aria-pressed="false">
+                <span class="icon icon-moon" aria-hidden="true"></span>
+                <span>أذكار المساء</span>
+            </button>
+
+            <button type="button" class="cat-btn" data-category="tasbeeh" aria-pressed="false">
+                <span class="icon icon-tasbih" aria-hidden="true"></span>
+                <span>التسبيح والاستغفار</span>
+            </button>
+        </nav>       
+    </header>
+    
+    <main>
+        <!-- hero section -->
+        <section class="hero">
+            <div class="hero-inner container">
+                <div class="hero-text">
+                    <h1>وِرد</h1>
+                    <p class="hero-sub">هدفنا الأساسي في وِرد أن نعينك على المداومة على ذكر الله في يومك كله، من أذكار الصباح إلى أذكار المساء، ونقرّبك منه خطوة بخطوة بالتسبيح والاستغفار، حتى يصير الذكر عادة جميلة تطمئن بها قلبك</p>
+                    <a class="hero-cta" href="#categories">ابدأ أذكارك</a>
+                </div>
+            </div>
+
+            <div>
+                <span class="icon icon-pattern" aria-hidden="true"></span>
+            </div>
+
+            
+        </section>
+
+        <!-- daily stats -->
+        <section class="stats" id="stats" aria-labelledby="stats-title">
+            <div class="container">
+                <h2 class="stats-title" id="stats-title">أذكارك اليوم</h2>
+
+                <div class="stats-grid">
+                    <!-- total -->
+                    <article class="stat-card">
+                        <div class="stat-head">
+                            <span class="icon icon-star" aria-hidden="true"></span>
+                            <h3>إجمالي أذكارك اليوم</h3>
+                        </div>
+                        <p class="stat-count"><span id="stat-total">0</span></p>
+                        <p class="stat-note">عدد كل الأذكار التي قلتها اليوم</p>
+                    </article>
+
+                    <!-- morning % -->
+                    <article class="stat-card stat-morning">
+                        <div class="stat-head">
+                            <span class="icon icon-sun" aria-hidden="true"></span>
+                            <h3>أذكار الصباح</h3>
+                        </div>
+                        <p class="stat-big"><span id="stat-morning-percent">0</span>%</p>
+                        <div class="bar" role="progressbar" aria-label="نسبة إنجاز أذكار الصباح" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="stat-morning-track">
+                            <div class="bar-fill" id="stat-morning-bar"></div>
+                        </div>
+                    </article>
+
+                    <!-- evening % -->
+                    <article class="stat-card stat-evening">
+                        <div class="stat-head">
+                            <span class="icon icon-moon" aria-hidden="true"></span>
+                            <h3>أذكار المساء</h3>
+                        </div>
+                        <p class="stat-big"><span id="stat-evening-percent">0</span>%</p>
+                        <div class="bar" role="progressbar" aria-label="نسبة إنجاز أذكار المساء" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="stat-evening-track">
+                            <div class="bar-fill" id="stat-evening-bar"></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Azkar categories -->
+        <section class="azkar-categories" id="categories" aria-labelledby="cats-title">
+            <div class="contanier">
+                <div class="cat-cards">
+                    <button type="button" class="cat-card" data-category="morning" aria-pressed="false">
+                        <span class="icon icon-sun" aria-hidden="true"></span>
+                        <span class="cat-card-title">أذكار الصباح</span>
+                        <span class="cat-card-sub">ابدأ يومك بالذكر</span>
+                    </button>
+                    <button type="button" class="cat-card" data-category="evening" aria-pressed="false">
+                        <span class="icon icon-moon" aria-hidden="true"></span>
+                        <span class="cat-card-title">أذكار المساء</span>
+                        <span class="cat-card-sub">اختم يومك بالذكر</span>
+                    </button>
+                    <button type="button" class="cat-card" data-category="tasbeeh" aria-pressed="false">
+                        <span class="icon icon-tasbih" aria-hidden="true"></span>
+                        <span class="cat-card-title">التسبيح والاستغفار</span>
+                        <span class="cat-card-sub">ورد يومي خفيف</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Azkar Cards -->
+        <section class="azkar-cards" id="azkar" data-theme="morning" aria-labelledby="section-title">
+            <div class="container">
+                <h2 class="section-title" id="section-title">أذكار الصباح</h2>
+                <p class="section-desc" id="section-desc"></p>
+                <div class="cards-container" id="cards-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>﴿وَالذَّاكِرِينَ اللَّهَ كَثِيرًا وَالذَّاكِرَاتِ أَعَدَّ اللَّهُ لَهُمْ مَغْفِرَةً وَأَجْرًا عَظِيمًا﴾</p>
+        <p>دعاء اللهم اجعلنا من الذاكرين الله كثيرًا والذاكرات، وتقبّل منا ومنكم صالح الأعمال</p>
+        <p class="footer-copy">&copy; 2026 وِرد. جميع الحقوق محفوظة.</p>
+    </footer>
+
+
+    <template id="card-template">
+        <article class="zikr-card">
+            <button type="button" class="zikr-tap" data-action="increment">
+                <span class="zikr-text"></span>
+                <span class="zikr-circle">
+                    <span class="circle-count"><span class="count">0</span>/<span class="target"></span></span>
+                    <span class="icon icon-circle-check done-icon" role="img" aria-label="تم"></span>
+                </span>
+            </button>
+
+            <button type="button" class="reset-btn" data-action="reset" aria-label="إعادة الذكر" hidden>
+                <span class="icon icon-rotate-ccw" aria-hidden="true"></span>
+            </button>
+        </article>
+    </template>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
